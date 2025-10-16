@@ -1,0 +1,76 @@
+Normal Board:
+┌───────┬───────┬───────┬───────┬───────┐
+│  C    │       │       │       │       │
+│ P     │       │       │       │       │
+│House  │Tree   │Stump  │Tunnel │Forest │
+├───────┼───────┼───────┼───────┼───────┤
+│       │       │       │       │       │
+│       │       │       │       │       │
+│       │       │       │       │       │
+├───────┼───────┼───────┼───────┼───────┤
+│       │       │       │       │       │
+│       │       │       │       │       │
+│       │       │       │       │       │
+├───────┼───────┼───────┼───────┼───────┤
+│       │       │       │       │       │
+│       │       │       │       │       │
+│       │       │       │       │       │
+├───────┼───────┼───────┼───────┼───────┤
+│       │       │       │       │       │
+│       │       │       │       │       │
+│Daisies│Tunnel │       │       │Lake   │
+└───────┴───────┴───────┴───────┴───────┘
+
+Burninated Tile:
+
+┌───────┐
+│** C **│
+│ KPTHA │
+│Lake   │
+└───────┘
+
+unsigned short int: suint
+
+Main Structure:
+
+unsigned short int (tile): [0][00][0000000][000][00][0]
+Bit 1: Troggy
+Bit 2 and 3: Peasant (+ burn statud
+Bit 4, 5, 6: Tile has Troghammer, Knight, and/or Archer
+Bits 7 - 13: Various Unique Tiles
+(13 is tunnel, 12 is mountains, 11 is lake, 10 is forest, 9-7 can be whatever)
+Bit 14 and 15: Cottage (+burn status)
+Bit 16: Burninated Tile
+(tiles are initialized (and modified) in somethiing like board[5][5])
+
+_bool troghammer:
+
+suint energy: 7 maximum
+
+suint maxP: Also doubles as max health
+
+struct TrogCrads deck[??]:
+
+suint ap: Action Points, given by crad
+
+Initilization Structure:
+ma
+
+
+TrogCrad Structure:
+
+char[] desc: Crad flavor text, e.g "MAJESTY: 5 action points, can burninate a tile for free."
+
+suint pGive: Actions points given, 16 max
+
+unsigned char special:
+[0000][0000]
+Bits 1 - 4: Minor Abilities
+Bits 5 - 8: Major Abilities
+
+
+MoveCrad Structure:
+
+suint p: Peasants spawned (only increment if cottage isn't burnt!)
+
+bool canFix: 
