@@ -1,6 +1,4 @@
-#include <stdio.h>
-#define suint unsigned short int
-
+#include "trogcommon.h"
 int main()
 {
 // Code go'eth here.
