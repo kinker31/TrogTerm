@@ -1,8 +1,6 @@
-#include <stdio.h>
-#define suint unsigned short int
+#include "buildercommon.h"
 
-int main()
+void MainDeckLoop()
 {
-// Code go'eth here.
-return 0;
+
 }

@@ -1,8 +1,14 @@
-#include <stdio.h>
-#define suint unsigned short int
+#include "buildercommon.h"
+#include "boardbuilder.c"
+#include "deckbuilder.c"
+
+void MainLoop()
+{
+
+}
 
 int main()
 {
-// Code go'eth here.
-return 0;
+
+	return 0;
 }
